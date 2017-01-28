@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require "./lib/fortune_teller"
+FortuneTeller::CLI.new.call
