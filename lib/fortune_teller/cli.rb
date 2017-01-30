@@ -22,7 +22,7 @@ class FortuneTeller::CLI
     @horoscopes.each.with_index(1) do |hs, i|
      puts "#{i}. #{hs.name}"
      puts "  #{hs.date}"
-   end
+    end
   end
   def menu
     input=nil
@@ -30,15 +30,15 @@ class FortuneTeller::CLI
      puts "selecte your horoscope enter a number or type exit"
      puts "**************************************************"
     input = gets.strip.downcase
-    if input=="list"
-      horoscope_list
-    elsif input.to_i > 0 && input.to_i <= 12
-      puts " Your horoscope today:*** #{@horoscopes[input.to_i-1].content}**"
-    else
-      puts "not included select a number or type list or exit."
-      puts"***************************************************"
+      if input=="list"
+       horoscope_list
+      elsif input.to_i > 0 && input.to_i <= 12
+        puts " Your horoscope today:*** #{@horoscopes[input.to_i-1].content}**"
+      else
+       puts "not included select a number or type list or exit."
+       puts"***************************************************"
+      end
     end
-  end
   end
   def see_you
     puts "Thank you for using our application. See you next time!"
