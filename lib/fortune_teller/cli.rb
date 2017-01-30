@@ -12,9 +12,9 @@ class FortuneTeller::CLI
     puts "    *                              **"
     puts "Do you want to know what your horoscope tells you today??"
     horoscope_list
-    puts "**************************"
+    puts "**************************************************"
     menu
-    puts "******************************************"
+    puts "**************************************************"
     see_you
   end
   def horoscope_list
@@ -30,10 +30,12 @@ class FortuneTeller::CLI
      puts "selecte your horoscope enter a number or type exit"
      puts "**************************************************"
     input = gets.strip.downcase
+    puts " "
       if input=="list"
        horoscope_list
       elsif input.to_i > 0 && input.to_i <= 12
         puts " Your horoscope today:*** #{@horoscopes[input.to_i-1].content}**"
+        puts "**************************************************"
       else
        puts "not included select a number or type list or exit."
        puts"***************************************************"
