@@ -18,7 +18,8 @@ class FortuneTeller::CLI
     see_you
   end
   def horoscope_list
-    @horoscopes=FortuneTeller::Horoscope.today
+    FortuneTeller::HoroscopeScraping.scrape_nypost_horoscope
+    @horoscopes=FortuneTeller::Horoscope.all
     @horoscopes.each.with_index(1) do |hs, i|
      puts "#{i}. #{hs.name}"
      puts "  #{hs.date}"
