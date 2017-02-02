@@ -28,10 +28,10 @@ class FortuneTeller::CLI
   def menu
     input=nil
     while input != "exit"
-     puts "selecte your horoscope enter a number or type exit"
-     puts "**************************************************"
-    input = gets.strip.downcase
-    puts " "
+      puts "selecte your horoscope enter a number or type exit"
+      puts "**************************************************"
+      input = gets.strip.downcase
+      puts " "
       if input=="list"
        horoscope_list
       elsif input.to_i > 0 && input.to_i <= 12
